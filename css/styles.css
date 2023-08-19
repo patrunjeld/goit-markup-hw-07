@@ -20,8 +20,15 @@
 .global-footer{
     background-color:var(--backround);
     height: 251px;
-    padding: 60px 0 60px 215px;
     display: flex;
+}
+
+.footer-margin{
+    display: flex;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 0;
 }
 
 .global-footer .logo-bottom{
@@ -1022,4 +1029,10 @@ a, button, img {
     justify-content: center;
     align-items: center;
     gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) {  
 }
