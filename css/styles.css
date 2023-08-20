@@ -848,6 +848,12 @@ a, button, img {
     stroke: var(--white);
     stroke-width: 0.2;
   }
+
+  .icon-checked{
+    color: #fff;
+    position: absolute;
+    left: 10%;
+  }
   
   .service-text {
     color: #757575;
