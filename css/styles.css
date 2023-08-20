@@ -312,8 +312,10 @@ a, button, img {
 
 .contact-header{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 40px;  
+    gap: 10px;
+    min-width: 160px; 
 }
 
 .main-section{
@@ -1037,8 +1039,18 @@ a, button, img {
     gap: 12px;
 }
 
+/* Starting with Tablet */
 @media screen and (min-width: 768px) {
+
+
 }
 
+/* Starting with Desktop */
 @media screen and (min-width: 1280px) {  
+    .contact-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;  
+}
 }
