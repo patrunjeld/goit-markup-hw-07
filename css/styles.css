@@ -17,17 +17,22 @@
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.main-navigation {
+    display: none;
+}
+
+.contact-header{
+    display: none;
+}
+
 .global-footer{
     background-color:var(--backround);
-    height: 251px;
     display: flex;
+    text-align: center;
 }
 
 .footer-margin{
-    display: flex;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 480px;
     padding: 60px 0;
 }
 
@@ -110,32 +115,6 @@ a, button, img {
     position: relative;
 }
 
-.global-header .main-navigation ul li a{
-    color:var(--link-color);
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.28px;
-    text-decoration: none;
-}
-
-.global-header .main-navigation ul li a.active{
-    color:var(--link-active-color);
-}
-
-.global-header .main-navigation ul li a.active::after{
-    content: "";
-    position: absolute;
-    bottom: -30px;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    border-radius: 10px;
-    background-color: var(--link-active-color);
-    
-}
 
 .button {
     color:var(--heading-color);
@@ -152,6 +131,11 @@ a, button, img {
     cursor: pointer;
 }
 
+.section{
+    display: none;
+}
+
+
 .list-tags{
     color:var(--link-color);
     font-family:var(--text-font-family);
@@ -160,9 +144,12 @@ a, button, img {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.42px;
-    display: flex;
     justify-content: center;
-    padding: 94px 215px;
+    padding: 60px 15px;
+}
+
+.list-tags,span{
+    text-align: center;
 }
 
 .list-tags p{
@@ -174,6 +161,7 @@ a, button, img {
     line-height: 24px;
     letter-spacing: 0.42px;
     margin-top: 10px;
+    text-align: start;
 }
 
 
@@ -202,14 +190,15 @@ a, button, img {
 .list-tags ul{
     display: flex;
     gap:30px;
+    flex-direction: column;
 }
 
 .list-tags li{
-    width: 270px;
+    width: 450px;
 }
 
 .list-tags li .tags-icon{
-    width: 270px;
+    width: 450px;
     height: 120px;
     background-color:var(--tags-background-color);
     border-radius: 4px;
@@ -303,27 +292,13 @@ a, button, img {
     height: 80px;
 }
 
-.global-header .main-navigation ul{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 330px 0 93px;
-    gap: 50px;
-}
-
-.contact-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    min-width: 160px; 
-}
 
 .main-section{
     background:linear-gradient(rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url('../images/slide-background.png');
     background-size: cover;
 }
 .main-section .main-text{
-    height: 600px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -334,32 +309,16 @@ a, button, img {
     color: #FFF;
     text-align: center;
     font-family: Roboto;
-    font-size: 44px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 900;
-    line-height: 60px; /* 136.364% */
+    line-height: 1.62;
     letter-spacing: 2.64px;
     text-transform: uppercase;
-    width: 696px;
+    width: 360px;
 }
 
-.section{
-    margin-bottom: 94px;
-    justify-content: center;
-}
 
-.title-section{
-    display: flex;
-    margin-bottom: 50px;
-    justify-content: center;
-}
-
-.img-section{
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-
-}
 
 .list-tags-team{
     padding: 94px 0;
@@ -374,11 +333,10 @@ a, button, img {
 
 .team-images{
     display: flex;
+    flex-direction: column;
     gap: 30px;
     justify-content: center;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;  
+    align-items: center;
 }
 
 .team-images .image-employ{
@@ -386,10 +344,14 @@ a, button, img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 270px;
+    width: 450px;
     border-radius: 0px 0px 4px 4px;
     background: #FFF;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.team-images .image-employ img{
+    width: 450px;
 }
 
 .team-images .image-employ span{
@@ -506,16 +468,18 @@ a, button, img {
 
 .brand-items .brand-icons{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 50px;
     gap:30px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
 }
 
 .brand-items .company-icon{
     height: 92px;
-    width: 170px;
+    width: 210px;
     gap: 30px;
     background-color: var(--heading-color);
     display: flex;
@@ -572,8 +536,8 @@ a, button, img {
 .social-icons-footer{
     display: flex;
     flex-direction: column;
-    margin-left: 94px;
-    margin-top: 15px;
+    align-items: center;
+    margin-top: 60px;
 
 }
 
@@ -642,35 +606,19 @@ a, button, img {
     border: none;
 }
 
-.img-section{
-    position: relative;
-}
 
 
 
-.overlay-text{
-    background-color: rgba(47, 48, 58, 0.80);
-    position: absolute;
-    bottom: 0;
-    width: 370px;
-    height: 70px;
-    color: #FFF;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.42px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-}
+
 
 .card-service {
     position: relative;
+}
+
+.container {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-service .hover-container-text{
@@ -978,8 +926,7 @@ a, button, img {
 .subscribe-form{
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
-    margin-left: 93px;
+    margin-top: 60px;   
     gap: 20px;
 }
 
@@ -994,7 +941,7 @@ a, button, img {
     text-transform: uppercase;
 }
 
-.subscribe-form .container input{
+.subscribe-form .subtitle input{
     width: 358px;
     height: 50px;
     border-radius: 4px;
@@ -1011,9 +958,10 @@ a, button, img {
     letter-spacing: 0.48px;                                                                                    
 }
 
-.subscribe-form .container{
+.subscribe-form .subtitle{
     display: flex;
-    gap:12px;
+    flex-direction: column;
+    gap:20px;
     align-items: center;
 }
 
@@ -1042,15 +990,303 @@ a, button, img {
 /* Starting with Tablet */
 @media screen and (min-width: 768px) {
 
+    .main-navigation{
+        display: block;
+    }
 
+    .global-header .main-navigation ul li a{
+        color:var(--link-color);
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        text-decoration: none;
+    }
+    
+    .global-header .main-navigation ul li a.active{
+        color:var(--link-active-color);
+    }
+    
+    .global-header .main-navigation ul li a.active::after{
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 10px;
+        background-color: var(--link-active-color);
+    }
+
+    .global-header .main-navigation ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    
+
+    .contact-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        min-width: 160px; 
+    }
+
+    .main-text h1 {
+        font-size: 26px;
+        width: 360px;
+    }
+    
+    .list-tags{
+        color: var(--link-color);
+        font-family: var(--text-font-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.42px;
+        display: flex;
+        justify-content: center;
+        padding: 60px 15px;
+    }
+
+    .list-tags ul{
+        grid-gap: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .list-tags li{
+        width: 354px;
+    }
+
+    .list-tags li .tags-icon {
+        width: 354px;
+        height: 120px;
+        background-color: var(--tags-background-color);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    
+    .list-tags,span{
+        text-align: start;
+    }
+    
+    .list-tags p{
+        color:var(--second-color);
+        font-family:var(--text-font-family);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.42px;
+        margin-top: 10px;
+        text-align: start;
+    }
+    
+
+    .container {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .team-images {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 0 15px;
+    }
+
+    .team-images .image-employ{
+        width: 354px;
+    }
+    
+    .image-employ img{
+        width: 354px;
+    }
+
+    .brand-items .brand-icons{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brand-items .company-icon{
+        width: 226px;
+    }
+
+    .footer-margin{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 0px;
+        gap: 60px 165px;
+    }
+
+    .social-icons-footer{
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .subscribe-form{
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .subscribe-form .subtitle {
+        flex-direction: column;
+    }
 }
 
 /* Starting with Desktop */
-@media screen and (min-width: 1280px) {  
+@media screen and (min-width: 1200px) { 
+
     .contact-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;  
+    }
+
+    .global-header .main-navigation ul{
+        margin: 0 330px 0 93px;
+    }
+
+    .main-section{
+        background:linear-gradient(rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), url('../images/slide-background.png');
+        background-size: cover;
+    }
+    .main-section .main-text{
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-text h1{
+        color: #FFF;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 60px; /* 136.364% */
+        letter-spacing: 2.64px;
+        text-transform: uppercase;
+        width: 696px;
+    }
+
+
+.list-tags ul{
     display: flex;
+    gap:30px;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;  
 }
+
+.list-tags li .tags-icon {
+    width: 270px;
+    height: 120px;
+    background-color: var(--tags-background-color);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.list-tags li{
+    width: 270px;
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section{
+    display: inline;
+    margin-bottom: 94px;
+    justify-content: center;
+}
+
+.title-section{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.img-section{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+}
+
+.img-section{
+    position: relative;
+}
+
+.brand-items .brand-icons {
+    flex-wrap: nowrap;
+}
+
+.overlay-text{
+    background-color: rgba(47, 48, 58, 0.80);
+    position: absolute;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.team-images{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.footer-margin{
+    display: flex;
+    text-align: start;
+    padding: 60px 15px;
+    gap:70px;
+}
+
+
+.subscribe-form .subtitle{
+    display: flex;
+    gap:12px;
+    flex-direction: row;
+}
+
+.social-icons-footer{
+    align-items: flex-start;
+}
+
 }

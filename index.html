@@ -32,7 +32,45 @@
                 <i data-feather="mail"></i>info@devstudio.com</a>
                 <a  class="social-links" href="tel:+1 212-772-4150">
                 <i data-feather="smartphone"></i>+1 212-772-4150</a>
-                </div> 
+                </div>
+                <button class="menu-open" data-menu-open>
+                    <svg class="menu-burger" width="24" height="16">
+                      <use href="./images/menu/icons.svg#icon-burger"></use>
+                    </svg>
+                    </button>
+                
+                <div class="mob-menu flex is-hidden" data-menu>
+                    <div>
+                      <button class="menu-close" data-menu-close>
+                        <svg class="menu-close" width="40" height="40">
+                          <use href="./images/menu/close.svg"></use>
+                        </svg>
+                      </button>
+                      <ul class="mob-menu-list list">
+                        <li class="mob-menu-list__item">
+                          <a class="mob-menu-list__link link mob-menu-list__link--current" href="./index.html">Studio</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                          <a class="mob-menu-list__link link" href="./portfolio.html">Protofolio</a>
+                        </li>
+                        <li class="mob-menu-list__item">
+                          <a class="mob-menu-list__link link" href="">Contacts</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mob-menu-list__down">
+                      <a class="mob-menu-list__tell link" href="tel:+1 212-772-4150">
+                        +1 212-772-4150</a>
+                      <a class="mob-menu-list__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                      <ul class="mob-menu-list__social list">
+                        <li class="mob-menu-list__social-item">Instagram</li>
+                        <li class="mob-menu-list__social-item">Twitter</li>
+                        <li class="mob-menu-list__social-item">Facebook</li>
+                        <li class="mob-menu-list__social-item">LinkedIn</li>
+                      </ul>
+                    </div>
+                  </div>
+
             </header>
         </div>
     <main>
@@ -43,7 +81,7 @@
             </div>
         </section>
 
-        <section class="list-tags">
+        <section class="container list-tags">
             <ul>
                 <li>
                     <a href="https://www.antenna.com" class="tags-icon" aria-label="antenna">
@@ -90,7 +128,7 @@
             </ul>
         </section>
 
-        <section class="section">
+        <section class="container section">
             <h2 class="title-section">What we do</h2>
             <div class="img-elements">
                 <ul class="img-section">
@@ -119,7 +157,7 @@
 
         <section class="list-tags-team">
             <h2 class="team-title">Our Team</h2>
-                 <div class="team-images">
+                 <div class="container  team-images">
                     <div class="image-employ">
                         <img src="images/angajact-cu-ochelari.jpg"
                         alt="Angajat cu camasa maro" width="270">
@@ -231,7 +269,7 @@
                     </div>
                 </div>
         </section>
-        <section class="brand-items">
+        <section class="container brand-items">
             <h3 class="brand-tittle">Regular Cutomers</h3>
            <div class="brand-icons">
                 <a href="https://www.brand.com" class="company-icon" aria-label="company-name">
@@ -268,7 +306,7 @@
         </section>
     </main>
     <footer class="global-footer">
-        <div class="footer-margin">
+        <div class="container  footer-margin">
         <div class="contact-footer-section">
         <a href="https://webstudio.is/" class="logo-bottom">Web<span>Studio</span></a>
         <address class="global-adress">
@@ -307,11 +345,11 @@
             </section>
     
             <form class="subscribe-form">
-                <div class="container">
+                <div class="subtitle">
                   <h2>Subscribe to our Newsletter</h2>
                 </div>
               
-                <div class="container">
+                <div class="subtitle">
                   <input type="text" placeholder="Email" name="mail" required>
               
                   <button class="button-subs">Subscribe
@@ -411,5 +449,6 @@
         feather.replace()
       </script>
     <script src="js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
